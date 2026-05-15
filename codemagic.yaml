@@ -8,12 +8,10 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
-          cd flutter_project
-          flutter packages pub get
+          cd flutter_project && flutter packages pub get
       - name: Build Android APK
         script: |
-          cd flutter_project
-          flutter build apk --release
+          cd flutter_project && flutter build apk --release
     artifacts:
       - flutter_project/build/app/outputs/flutter-apk/app-release.apk
     publishing:
