@@ -1,0 +1,6 @@
+{
+  "name": "Guardian SOS Mobile App",
+  "description": "A emergency response application prototype with a secure login flow, approval system, and instant SOS signaling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

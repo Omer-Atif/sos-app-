@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-white overflow-hidden;
+    background: radial-gradient(at 0% 0%, #312e81 0%, transparent 50%), 
+                radial-gradient(at 100% 100%, #4c1d95 0%, transparent 50%), 
+                #0f172a;
+    min-height: 100vh;
+  }
+}
+
+/* Mobile Simulation Container */
+.mobile-viewport {
+  @apply relative mx-auto my-8 w-full max-w-[400px] h-[800px] max-h-[90vh] bg-white/5 backdrop-blur-2xl border border-white/20 rounded-[3rem] shadow-2xl overflow-hidden;
+}
+
+/* Status Bar Area */
+.status-bar {
+  @apply h-12 w-full flex items-center justify-between px-8 text-xs font-medium z-50 text-white/70;
+}
+
+.home-indicator {
+  @apply absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-white/10 rounded-full z-50;
+}

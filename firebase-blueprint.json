@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account information and approval status",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "approved": { "type": "boolean" },
+        "approvalsCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "approvers": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["username", "email", "approved", "approvalsCount", "createdAt"]
+    },
+    "Alert": {
+      "title": "SOS Alert",
+      "description": "Emergency alert triggered by a user",
+      "type": "object",
+      "properties": {
+        "user": { "type": "string" },
+        "time": { "type": "string", "format": "date-time" },
+        "status": { "type": "string" },
+        "message": { "type": "string" }
+      },
+      "required": ["user", "time", "status", "message"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/alerts/{alertId}": {
+      "schema": "Alert",
+      "description": "Global emergency alerts"
+    }
+  }
+}
