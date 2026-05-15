@@ -17,4 +17,4 @@ workflows:
     publishing:
       email:
         recipients:
-          - YOUR_EMAIL_HERE
+          - omeratif06@gmail.com
